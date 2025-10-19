@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piyush Jain - Portfolio</title>
+<link rel="icon" href="https://github.com/Piyushjain1857.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1724;
+    --card: rgba(11, 18, 32, 0.8);
+    --accent: #00d4ff;
+    --accent2: #00ff85;
+    --muted: #a0d6c2;
+    --glass: rgba(255,255,255,0.03);
+  }
+
+  * { box-sizing: border-box; }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #1d2600;
+    
+    color: #f8eee6;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+ body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 10% 20%, #ff4d4d 2px, transparent 4px),
+    radial-gradient(circle at 30% 40%, #ffcc33 2px, transparent 4px),
+    radial-gradient(circle at 50% 60%, #4dff4d 2px, transparent 4px),
+    radial-gradient(circle at 70% 25%, #3399ff 2px, transparent 4px),
+    radial-gradient(circle at 85% 80%, #ff33cc 2px, transparent 4px);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  animation: fireworks 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes fireworks {
+  0%, 100% {
+    background-size: 150px 150px;
+    opacity: 1;
+  }
+  50% {
+    background-size: 120px 120px;
+    opacity: 0.7;
+  }
+}
+
+  @keyframes float {
+    0% {
+      background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+      background-position: 100px 100px, 100px 0, 0 100px;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  body > .container {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  main {
+    animation: fadeIn 1.2s ease forwards;
+  }
+
+  .container {
+    max-width: 980px;
+    margin: 48px auto;
+    padding: 24px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow:
+      0 0 10px var(--accent),
+      0 0 20px var(--accent),
+      0 0 30px var(--accent);
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    border: 2px solid var(--accent);
+  }
+
+  .card:hover {
+    border: 2px solid var(--accent2);
+    box-shadow:
+      0 0 10px var(--accent),
+      0 0 20px var(--accent2),
+      0 0 30px var(--accent);
+  }
+
+  header { display: flex; align-items: center; gap: 18px; }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--glass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  h1 { 
+    margin: 0; 
+    font-size: 22px; 
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 600px) {
+  .avatar { width: 100px; height: 100px; }
+  h1 { font-size: 24px; }
+  }
+  
+  h2 {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  p.lead { color: var(--muted); margin: 6px 0 0; }
+
+  .grid { display: grid; grid-template-columns: 1fr 320px; gap: 18px; margin-top: 20px; }
+  .about { line-height: 1.6; }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .skill { 
+    background: rgba(255,255,255,0.03); 
+    padding: 8px 10px; 
+    border-radius: 999px; 
+    font-size: 13px; 
+    color: #cfeee0; 
+    transition: box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .skill:hover {
+    box-shadow: 0 0 8px 2px rgba(0, 255, 133, 0.7);
+  }
+
+  .projects { margin-top: 14px; display: grid; gap: 12px; }
+  .project {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+    padding: 12px; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    border: 2px solid transparent;
+  }
+  .project:hover { 
+    transform: translateY(-5px); 
+    border: 2px solid var(--accent);
+    box-shadow:
+      0 0 10px var(--accent),
+      0 0 20px var(--accent),
+      0 0 30px var(--accent);
+  }
+
+  .meta { color: var(--muted); font-size: 13px; }
+
+  aside .contact { background: var(--glass); padding: 14px; border-radius: 12px; }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #042018;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.7);
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 15px rgba(0, 212, 255, 0.7),
+      0 0 25px rgba(0, 255, 133, 0.6);
+  }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent2);
+}
+
+  footer { margin-top: 22px; text-align: center; color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 880px) {
+    .grid { grid-template-columns: 1fr; }
+    .avatar { width: 80px; height: 80px; }
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .container { padding: 16px; }
+    h1 { font-size: 20px; }
+    .btn { padding: 8px 12px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <header>
+      <div class="avatar">
+        <img src="./profile_photo.JPG" alt="Piyush Jain" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+      </div>
+      <div style="flex:1">
+        <h1>Piyush Jain</h1>
+        <p class="lead">BCA Student</p>
+      </div>
+      <div style="text-align:left">
+        <div class="meta">Location: Gurugram-122001, India</div>
+        <div class="meta">Email: <a href="mailto:Piyushjain1857@example.com">Piyushjain1857@example.com</a></div>
+        <div class="meta">Phone: <a href="tel:+918595850153">+91 85958 50153</a></div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="about">
+          <h2>About Me</h2>
+          <p>Heyy — I'm <strong>Piyush Jain</strong>, a dedicated student pursuing a Bachelor of Computer Applications (BCA) with a specialization in Artificial Intelligence and Data Science at K.R. Mangalam University, Sohna.</p>
+          <p>My academic journey has equipped me with strong technical skills in HTML, CSS, Bootstrap, and Python, along with a foundational understanding of JavaScript. I am deeply interested in web development and AI-driven solutions, constantly striving to enhance my technical expertise and creativity through hands-on projects.</p>
+          <div class="skills">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><span class="skill">HTML</span></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><span class="skill">CSS</span></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><span class="skill">JavaScript</span></a>
+            <a href="https://www.python.org/" target="_blank"><span class="skill">Python</span></a>
+          </div>
+        </section>
+
+        <section class="projects">
+          <h2>Projects</h2>
+          <div class="project">
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <strong>Personal Portfolio (this site)</strong>
+              <span class="meta">2025</span>
+            </div>
+            <p class="meta">A simple responsive single-file portfolio built with HTML/CSS.</p>
+            <a class="btn" href="./index.html">Contact about this</a>
+          </div>
+
+          <div class="project">
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <strong>College Assignment Tool</strong>
+              <span class="meta">2025</span>
+            </div>
+            <p class="meta">A small HTML Project.</p>
+            <a class="btn" href="https://piyushjain1857.github.io/webdeveloment/Assignment%201/html/index.html">Contact about this</a>
+          </div>
+        </section>
+
+        <section id="contact" style="margin-top:18px">
+          <h2>Contact</h2>
+          <p class="meta">Interested in collaborating? Reach out.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="tel:+918595850153">Call Me</a>
+            <a class="btn" href="mailto:Piyushjain1857@example.com">Email me</a>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <div class="contact">
+          <h3>Quick Info</h3>
+          <p class="meta">College: K.R. Mangalam University</p>
+          <p class="meta">Skills level: Beginner → Intermediate</p>
+          <p style="margin-top:10px"><strong>Social</strong></p>
+          <p class="meta">Phone: <a href="tel:+918595850153">+91 85958 50153</a></p>
+          <p class="meta">LinkedIn: <a href="https://www.linkedin.com/in/piyush-jain-122b59386/" target="_blank">@piyush.jain.__</a></p>
+          <p class="meta">GitHub: <a href="https://github.com/Piyushjain1857" target="_blank">@Piyush.jain__</a></p>
+          <p class="meta">WhatsApp: <a href="https://wa.me/8595850153/?text=I%20am%20interested%20in%20your%20services" target="_blank">Message Me</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Made by Piyush Jain • © 2025
+    </footer>
+  </div>
+</div>
+</body>
+</html>
