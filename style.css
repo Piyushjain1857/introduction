@@ -107,11 +107,12 @@ h1 {
     padding: 12px;
     border-radius: 12px;
 }
-
-.project-row { display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+.project:hover {
+    transform: translateY(-5px);
+    border: 2px solid #00d4ff;
+    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
 }
+.project-row { display: flex; justify-content: space-between; align-items: center; }
 aside .contact {
     background: rgba(255,255,255,0.03);
     padding: 14px;
@@ -127,6 +128,10 @@ aside .contact {
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 0 8px rgba(0, 212, 255, 0.7);
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7), 0 0 25px rgba(0, 255, 133, 0.6);
 }
 a { 
     color: #00d4ff; 
