@@ -1,7 +1,6 @@
 * { 
     box-sizing: border-box;
 }
-html { scroll-behavior: smooth; }
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -9,8 +8,6 @@ body {
     color: #f8eee6;
     position: relative;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 body::before {
     content: "";
