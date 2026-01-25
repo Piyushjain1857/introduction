@@ -12,9 +12,6 @@ body {
 }
 
 body::before {
-        radial-gradient(circle at 50% 60%, #4dff4d 2px, transparent 4px),
-        radial-gradient(circle at 70% 25%, #3399ff 2px, transparent 4px),
-        radial-gradient(circle at 85% 80%, #ff33cc 2px, transparent 4px);
     background-repeat: repeat;
     background-size: 150px 150px;
     animation: fireworks 5s linear infinite;
