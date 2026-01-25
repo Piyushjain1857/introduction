@@ -13,7 +13,7 @@ body {
 
 @keyframes fireworks {
 
-    0%,
+
     100% {
         background-size: 150px 150px;
         opacity: 1;
