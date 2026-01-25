@@ -12,12 +12,6 @@ body {
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: radial-gradient(circle at 10% 20%, #ff4d4d 2px, transparent 4px),
         radial-gradient(circle at 30% 40%, #ffcc33 2px, transparent 4px),
         radial-gradient(circle at 50% 60%, #4dff4d 2px, transparent 4px),
