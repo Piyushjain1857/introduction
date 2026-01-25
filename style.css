@@ -11,10 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-@keyframes fadeIn {
-
-}
-
 .container {
     max-width: 980px;
     margin: 48px auto;
