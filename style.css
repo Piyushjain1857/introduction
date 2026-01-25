@@ -11,13 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-body::before {
-    background-repeat: repeat;
-    background-size: 150px 150px;
-    animation: fireworks 5s linear infinite;
-    z-index: -1;
-}
-
 @keyframes fireworks {
 
     0%,
