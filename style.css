@@ -17,13 +17,13 @@
     padding: 24px;
 } */
 
-/* .card {
+.card {
     background: rgba(11, 18, 32, 0.8);
     border-radius: 14px;
     padding: 22px;
     box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
     border: 2px solid #00d4ff;
-} */
+}
 
 .card:hover {
     border: 2px solid #00ff85;
