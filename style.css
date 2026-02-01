@@ -168,7 +168,7 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Responsive tweaks preserved */
+/* Responsiveness */
 @media (max-width: 880px) {
     .grid {
         grid-template-columns: 1fr;
