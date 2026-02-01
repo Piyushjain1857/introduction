@@ -2,14 +2,14 @@
     box-sizing: border-box;
 }
 
-/* body {
+body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #1d2600;
     color: #f8eee6;
     position: relative;
     overflow-x: hidden;
-} */
+}
 
 .container {
     max-width: 980px;
